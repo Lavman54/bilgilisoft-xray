@@ -17,7 +17,7 @@ if not os.path.exists(dataset_path):
     with zipfile.ZipFile(zip_path, "r") as zip_ref:
         zip_ref.extractall(".")
 
-    print("Veri seti başarıyla indirildi ve çıkarıldı!")git add prepare_dataset.py
+    print("Veri seti başarıyla indirildi ve çıkarıldı!")
 import os
 import torch
 from torchvision import datasets, transforms
