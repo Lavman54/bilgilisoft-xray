@@ -1,4 +1,24 @@
 import os
+import urllib.request
+import zipfile
+
+# Veri seti yolu
+dataset_path = "covid19_dataset"
+
+# Eğer veri seti klasörü yoksa, indir
+if not os.path.exists(dataset_path):
+    dataset_url = "https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database/download"
+    zip_path = "dataset.zip"
+
+    print("Veri seti indiriliyor...")
+    urllib.request.urlretrieve(dataset_url, zip_path)
+
+    # ZIP dosyasını çıkar
+    with zipfile.ZipFile(zip_path, "r") as zip_ref:
+        zip_ref.extractall(".")
+
+    print("Veri seti başarıyla indirildi ve çıkarıldı!")
+import os
 import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
