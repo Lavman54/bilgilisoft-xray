@@ -1,3 +1,12 @@
+import sys
+import os
+
+# Dosya yolunu düzelt
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Şimdi import et
+from prepare_dataset import class_names
+
 import streamlit as st
 import torch
 import torchvision.transforms as transforms
