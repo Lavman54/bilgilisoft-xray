@@ -18,7 +18,7 @@ st.markdown(
 
 # Logoyu yükle ve üst merkeze yerleştir
 logo = Image.open("logo.jpeg")  # Logonun dosya adını ve uzantısını doğru yaz!
-st.markdown('<div class="logo-container"><img src="logo.jpg" width="250"></div>', unsafe_allow_html=True)
+st.markdown('<div class="logo-container"><img src="logo.jpg" width="200"></div>', unsafe_allow_html=True)
 
 
 
