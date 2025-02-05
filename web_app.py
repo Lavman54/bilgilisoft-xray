@@ -1,6 +1,26 @@
 import streamlit as st
 from PIL import Image
 
+# CSS ile logoyu üst merkeze almak
+st.markdown(
+    """
+    <style>
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;  /* Logonun üst boşluğu */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Logoyu yükle ve üst merkeze yerleştir
+logo = Image.open("logo.jpeg")  # Logonun dosya adını ve uzantısını doğru yaz!
+st.markdown('<div class="logo-container"><img src="logo.jpg" width="250"></div>', unsafe_allow_html=True)
+
+
 
 import sys
 import os
@@ -58,7 +78,7 @@ transform = transforms.Compose([
 ])
 
 # Streamlit arayüzü
-st.write("Akciğer Grafisi Tahmin Sistemi")
+st.title("Akciğer Grafisi Tahmin Sistemi")
 st.write("Lütfen bir akciğer grafisi yükleyin.")
 
 # Kullanıcıdan görüntü yüklemesini iste
@@ -97,9 +117,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-import streamlit as st
-from PIL import Image
 
-# Sayfanın ortasına logo ekleme
-logo = Image.open("logo.jpeg")  # Logonun adını ve uzantısını doğru yaz!
-st.image(logo, width=300)  # Logonun genişliğini ayarla
