@@ -39,7 +39,6 @@ import torchvision.transforms as transforms
 from torchvision import models
 from PIL import Image
 import os
-st.markdown("<h1 style='text-align: center; color: blue;'>BİLGİLİSOFT</h1>", unsafe_allow_html=True)
 
 # Modeli yükleyelim
 from prepare_dataset import class_names
@@ -101,12 +100,6 @@ st.markdown(
 import streamlit as st
 from PIL import Image
 
-# Logo ekleme - Sayfanın altına ve ortasına almak için CSS kullanıyoruz
-st.markdown(
-    """
-    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
-        <img src="logo.jpg" width="150">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Sayfanın ortasına logo ekleme
+logo = Image.open("logo.jpg")  # Logonun adını ve uzantısını doğru yaz!
+st.image(logo, width=400)  # Logonun genişliğini ayarla
