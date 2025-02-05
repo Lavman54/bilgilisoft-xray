@@ -58,7 +58,7 @@ transform = transforms.Compose([
 ])
 
 # Streamlit arayüzü
-st.title("Akciğer Grafisi Tahmin Sistemi")
+st.write("Akciğer Grafisi Tahmin Sistemi")
 st.write("Lütfen bir akciğer grafisi yükleyin.")
 
 # Kullanıcıdan görüntü yüklemesini iste
@@ -102,4 +102,4 @@ from PIL import Image
 
 # Sayfanın ortasına logo ekleme
 logo = Image.open("logo.jpeg")  # Logonun adını ve uzantısını doğru yaz!
-st.image(logo, width=400)  # Logonun genişliğini ayarla
+st.image(logo, width=300)  # Logonun genişliğini ayarla
