@@ -1,3 +1,9 @@
+import streamlit as st
+from PIL import Image
+# Logo ekleme
+logo = Image.open("logo.jpeg")  # Buraya JPG formatındaki dosyanın adını yaz
+st.image(logo, width=200)  # Genişliği isteğe göre ayarla
+
 import sys
 import os
 
