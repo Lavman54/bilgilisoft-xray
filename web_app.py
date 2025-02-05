@@ -1,51 +1,6 @@
 import streamlit as st
 from PIL import Image
 
-# CSS ile Dark Mode (Siyah Arka Plan ve Açık Mavi Yazılar)
-st.markdown(
-    """
-    <style>
-    /* Sayfanın arka planını siyah yap */
-    body {
-        background-color: black;
-        color: #ADD8E6; /* Açık Mavi */
-    }
-
-    /* Başlıkları açık mavi yap */
-    h1, h2, h3, h4, h5, h6 {
-        color: #ADD8E6; /* Açık Mavi */
-    }
-
-    /* Butonları özelleştirme */
-    .stButton>button {
-        background-color: white;
-        color: black;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    /* Yüklenen dosya seçme butonu */
-    .stFileUploader label {
-        color: #ADD8E6; /* Açık Mavi */
-    }
-
-    /* Sidebar arka planını koyulaştır */
-    .css-1d391kg {
-        background-color: #333 !important;
-    }
-
-    /* Logo ortalama ve sayfanın altına yerleştirme */
-    .footer {
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 import sys
 import os
@@ -140,6 +95,18 @@ st.markdown(
     }
     </style>
     <div class="footer">Written by Arda Bilgili</div>
+    """,
+    unsafe_allow_html=True
+)
+import streamlit as st
+from PIL import Image
+
+# Logo ekleme - Sayfanın altına ve ortasına almak için CSS kullanıyoruz
+st.markdown(
+    """
+    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
+        <img src="logo.jpg" width="150">
+    </div>
     """,
     unsafe_allow_html=True
 )
