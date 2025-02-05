@@ -100,3 +100,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+import streamlit as st
+from PIL import Image
+
+# Logo ekleme - Sayfanın altına ve ortasına almak için CSS kullanıyoruz
+st.markdown(
+    """
+    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
+        <img src="logo.jpg" width="150">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
