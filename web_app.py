@@ -101,5 +101,5 @@ import streamlit as st
 from PIL import Image
 
 # Sayfanın ortasına logo ekleme
-logo = Image.open("logo.jpg")  # Logonun adını ve uzantısını doğru yaz!
+logo = Image.open("logo.jpeg")  # Logonun adını ve uzantısını doğru yaz!
 st.image(logo, width=400)  # Logonun genişliğini ayarla
