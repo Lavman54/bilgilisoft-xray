@@ -1,25 +1,12 @@
 import streamlit as st
 from PIL import Image
 
-# CSS ile logoyu üst merkeze almak
-st.markdown(
-    """
-    <style>
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;  /* Logonun üst boşluğu */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Logoyu yükle
+logo = Image.open("logo.jpeg")  # Logonun adını doğru yaz!
 
-# Logoyu yükle ve üst merkeze yerleştir
-logo = Image.open("logo.jpeg")  # Logonun dosya adını ve uzantısını doğru yaz!
-st.markdown('<div class="logo-container"><img src="logo.jpg" width="200"></div>', unsafe_allow_html=True)
-
+# Logoyu üst merkeze almak için
+st.markdown("<br><br>", unsafe_allow_html=True)  # Boşluk ekleyerek logoyu aşağı kaydır
+st.image(logo, width=250)  # Logoyu ortala ve genişliğini ayarla
 
 
 import sys
