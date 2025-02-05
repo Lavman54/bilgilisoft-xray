@@ -9,7 +9,7 @@ st.markdown(
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 150px;  /* Logonun üst boşluğu */
+        height: 100px;  /* Logonun üst boşluğu */
     }
     </style>
     """,
